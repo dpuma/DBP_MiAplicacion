@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/holo_orange_light"
+    tools:context=".OpcionesActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        style="@android:style/Widget.TextView.PopupMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@android:color/holo_orange_light"
+        android:text="@string/txt_peliculas"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup2"
+        style="@style/TextAppearance.AppCompat.Large"
+        android:layout_width="330dp"
+        android:layout_height="126dp"
+        android:layout_marginTop="8dp"
+        android:background="#C8FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView">
+
+        <RadioButton
+            android:id="@+id/rb_pelicula1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="@string/rb_pelicula1" />
+
+        <RadioButton
+            android:id="@+id/rb_pelicula2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/rb_pelicula2" />
+
+        <RadioButton
+            android:id="@+id/rb_pelicula3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/rb_pelicula3" />
+
+        <RadioButton
+            android:id="@+id/rb_pelicula4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/rb_pelicula4" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/textView2"
+        style="@android:style/Widget.TextView.PopupMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@android:color/holo_orange_light"
+        android:text="@string/txt_horarios"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup2" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup3"
+        style="@android:style/Widget.TextView.PopupMenu"
+        android:layout_width="333dp"
+        android:layout_height="96dp"
+        android:layout_marginTop="8dp"
+        android:background="#C8FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2">
+
+        <RadioButton
+            android:id="@+id/rb_horario1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="@string/rb_horario1" />
+
+        <RadioButton
+            android:id="@+id/rb_horario2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/rb_horario2" />
+
+        <RadioButton
+            android:id="@+id/rb_horario3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/rb_horario3" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btn_reservar"
+        android:layout_width="118dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="20dp"
+        android:background="#E65100"
+        android:onClick="Reservar"
+        android:text="@string/btn_reservar"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup3" />
+
+    <Button
+        android:id="@+id/btn_eliminar_reservas"
+        android:layout_width="141dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        android:background="#E65100"
+        android:onClick="Eliminar"
+        android:text="@string/btn_eliminar_reservas"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_ver_reservas" />
+
+    <Button
+        android:id="@+id/btn_ver_reservas"
+        android:layout_width="112dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        android:background="#E65100"
+        android:onClick="MostrarReservas"
+        android:text="@string/btn_ver_reservas"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_reservar" />
+
+    <Button
+        android:id="@+id/btn_regresar_main"
+        android:layout_width="95dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        android:onClick="Regresar"
+        android:text="@string/btn_regresar_main"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_eliminar_reservas" />
+</androidx.constraintlayout.widget.ConstraintLayout>
